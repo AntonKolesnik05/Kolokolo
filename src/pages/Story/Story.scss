@@ -1,11 +1,11 @@
-.hero {
+.story {
   padding: 0;
   margin: 0;
   width: 100%;
   max-width: 100%
 }
 
-.hero_image {
+.story_image {
   position: relative;
   width: 100%;
   height: 360px;
@@ -15,12 +15,12 @@
   background-position: center;
 }
 
-.hero_overlay {
+.story_overlay {
   position: absolute;
   inset: 0;
 }
 
-.hero_content {
+.story_content {
   position: absolute;
   top: 14px;
   left: 16px;
@@ -29,7 +29,7 @@
   color: #fff;
 }
 
-.hero_content h1 {
+.story_content h1 {
   font-family: "Julius Sans One", sans-serif;
   font-size: 20px;
   margin: 0;
@@ -38,7 +38,7 @@
   letter-spacing: 1px;
 }
 
-.hero_content p {
+.story_content p {
   font-family: "Junge", serif;
   font-size: 13px;
   margin: 30px 0 0;
@@ -47,56 +47,22 @@
   opacity: 0.95;
 }
 
-.hero_overlay {
+.story_overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
   pointer-events: none;
 }
 
-.hero_buttons {
-  font-family: "Junge", serif;
-  font-size: 13px;
-  margin-top: 22px;
-  margin: 0 auto;
-  display: flex;
-  gap: 16px;
-}
-
-.hero_btn {
-  margin-top: 30px;
-  flex: 1;
-  height: 72px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.hero_btn--light {
-  background: #d9cbb7;
-  color: #2b1e14;
-}
-
-.hero_btn--dark {
-  background: #6c533f;
-  color: #f8f5ee;
-}
-
 @media (min-width: 450px) and (max-width: 1024px){
-  .hero_content {
+  .story_content {
       top: 51px;
       left: 10%;
       right: auto;
       width: 300px;
     }
   
-  .hero_image {
+  .story_image {
     height: calc(250px);
     min-height: 470px;
     background-position: 35% top;
@@ -105,49 +71,27 @@
 }
 
 @media (min-width: 1024px) {
-  .hero_image {
+  .story_image {
     height: calc(250px);
     min-height: 720px;
     background-position: 20% top;
   }
 
-  .hero_content {
+  .story_content {
     top: 51px;
     left: 10%;
     right: auto;
     width: 521px;
   }
 
-  .hero_content h1 {
+  .story_content h1 {
     font-size: 64px;
     line-height: 1;
   }
 
-  .hero_content p {
+  .story_content p {
     font-size: 25px;
     line-height: 1.5;
     margin-top: 15px;
   }
-
-  .hero_buttons {
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-.hero_content,
-.hero_buttons,
-.hero_btn {
-  max-width: 100%;
-  min-width: 0;
-}
-
-.hero_btn {
-  min-width: 0;
-}
-
-.hero_btn--light,
-.hero_btn--dark {
-  width: fit-content;
-  max-width: 100%;
-}
 }

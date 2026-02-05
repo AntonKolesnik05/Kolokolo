@@ -1,5 +1,6 @@
 import './Hero.scss';
 import heroImg from '../../assets/images/hero.png';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -23,13 +24,13 @@ function Hero() {
           </p>
 
           <div className="hero_buttons">
-            <a className="hero_btn hero_btn--light" href="#gallery">
+            <Link className="hero_btn hero_btn--light" to="/Explore">
               EXPLORE OUR BAKERY
-            </a>
+            </Link>
 
-            <a className="hero_btn hero_btn--dark" href="#story">
+            <Link className="hero_btn hero_btn--dark" to="/Story">
               Our story
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,12 +4,31 @@
 }
 
 .header_inner {
-  font-family: "Julius Sans One", sans-serif;
-  height: 30px;
   display: flex;
+  padding-right: 16px;
+  padding-left: 16px;
   align-items: center;
   justify-content: space-between;
 }
+
+.nav {
+  display: none;
+  gap: 34px;
+  align-items: center;
+}
+
+.nav_link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Julius Sans One", serif;
+  font-size: 18px;
+  opacity: 1;
+}
+
+.nav_link:hover {
+  opacity: 1;
+}
+
 
 .brand {
   display: flex;
@@ -48,3 +67,34 @@
   display: block;
 }
 
+@media (min-width: 1024px) {
+  .header_inner{
+  padding-right: 10%;
+  padding-left: 10%;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+  .brand_name {
+  color: #F8F5EE;
+  width: 300px;
+  font-size: 32px;
+  font-weight: 700;
+}
+  .brand_logo {
+  width: 49px;
+  height: 49px;
+  display: block;
+}
+
+  .nav {
+  display: flex;
+}
+
+  .burger {
+  display: none;
+}
+}
+  

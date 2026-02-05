@@ -1,19 +1,26 @@
-import Header from '../src/components/Header/Header.jsx';
-import Hero from '../src/components/Hero/Hero.jsx';
-import Gallery from '../src/components/Gallery/Gallery.jsx';
-import Location from '../src/components/Location/Location.jsx';
-import Footer from '../src/components/Footer/Footer.jsx';
+import { Routes, Route } from 'react-router-dom'
+
+import Header from './components/Header/Header.jsx'
+import Footer from './components/Footer/Footer.jsx'
+
+import Home from './pages/Home/Home.jsx'
+import Explore from './pages/Explore/Explore.jsx'
+import Story from './pages/Story/Story.jsx'
 
 function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <Gallery />
-      <Location />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/story" element={<Story />} />
+      </Routes>
+
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

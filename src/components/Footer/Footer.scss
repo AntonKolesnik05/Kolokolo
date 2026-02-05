@@ -77,6 +77,9 @@
 @media (max-width: 640px) {
   .footer_inner {
     flex-direction: column;
+    padding-right: 10%;
+    padding-left: 10%;
+    height: 198px;
   }
 
   .footer_right {
