@@ -8,11 +8,11 @@
 .hero_image {
   position: relative;
   width: 100%;
-  height: 360px;
+  height: 426px;
   overflow: hidden;
 
   background-size: cover;
-  background-position: center;
+  background-position: right center;
 }
 
 .hero_overlay {
@@ -22,17 +22,22 @@
 
 .hero_content {
   position: absolute;
-  top: 14px;
-  left: 16px;
-  right: 16px;
+  top: 26px;
+  bottom: 26px;
+  left: 26px;
+  right: 26px;
   z-index: 1;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hero_content h1 {
-  font-family: "Julius Sans One", sans-serif;
+  font-family: "Krona One", sans-serif;
+  width: 220px;
   font-size: 20px;
-  margin: 0;
+  margin: 0px 0 0;
   font-size: 26px;
   line-height: 1.1;
   letter-spacing: 1px;
@@ -41,7 +46,7 @@
 .hero_content p {
   font-family: "Junge", serif;
   font-size: 13px;
-  margin: 30px 0 0;
+  margin: 0px 0 0;
   font-size: 13px;
   line-height: 1.5;
   opacity: 0.95;
@@ -55,35 +60,34 @@
 }
 
 .hero_buttons {
-  font-family: "Junge", serif;
-  font-size: 13px;
-  margin-top: 22px;
+  font-family: "Julius Sans One", serif;
   margin: 0 auto;
   display: flex;
-  gap: 16px;
+  gap: 6px;
 }
 
 .hero_btn {
-  margin-top: 30px;
+  margin-top: 13px;
   flex: 1;
-  height: 72px;
-  border-radius: 18px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   text-decoration: none;
-  font-size: 18px;
   font-weight: 500;
 }
 
-.hero_btn--light {
+.hero_btn.hero_btn--light {
+  font-size: 13px;
   background: #d9cbb7;
   color: #2b1e14;
+  height: 57px;
+  width: 149px;
 }
 
 .hero_btn--dark {
+  font-size: 20px;
   background: #6c533f;
   color: #f8f5ee;
 }
@@ -93,12 +97,12 @@
       top: 51px;
       left: 10%;
       right: auto;
-      width: 300px;
+      width: 400px;
     }
   
   .hero_image {
     height: calc(250px);
-    min-height: 470px;
+    min-height: 426px;
     background-position: 35% top;
   }
   
@@ -115,7 +119,7 @@
     top: 51px;
     left: 10%;
     right: auto;
-    width: 521px;
+    width: 621px;
   }
 
   .hero_content h1 {
@@ -127,11 +131,14 @@
     font-size: 25px;
     line-height: 1.5;
     margin-top: 15px;
+    margin-bottom: 81px;
   }
 
   .hero_buttons {
   flex-wrap: wrap;
   max-width: 100%;
+  gap: 20px;
+  margin-bottom: 106px;
 }
 
 .hero_content,
@@ -141,13 +148,14 @@
   min-width: 0;
 }
 
-.hero_btn {
-  min-width: 0;
+.hero_btn.hero_btn--light {
+  font-size: 23px;
+  height: 81px;
+  width: 310px;
 }
 
-.hero_btn--light,
-.hero_btn--dark {
-  width: fit-content;
-  max-width: 100%;
+.hero_btn {
+  min-width: 0;
+
 }
 }

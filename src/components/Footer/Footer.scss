@@ -1,20 +1,39 @@
 .footer {
   background: #120f0e;
   color: #f8f5ee;
-  padding: 22px 16px;
+  padding: 28px 0 18px;
 }
 
-.footer_inner {
+.footer_container {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+}
+
+.footer_container::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(217, 203, 183, 0.15), rgba(217, 203, 183, 0.75), rgba(217, 203, 183, 0.15));
+  margin-bottom: 18px;
+}
+
+.footer_top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(248, 245, 238, 0.12);
 }
 
 .footer_brand {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 22px;
+  gap: 14px;
 }
 
 .footer_logo {
@@ -22,67 +41,179 @@
   height: 56px;
   border-radius: 50%;
   display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.footer_brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer_name {
+  margin: 0;
+  font-family: "Julius Sans One", sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+  opacity: 0.95;
 }
 
 .footer_tag {
   margin: 0;
-  font-size: 26px;
-  line-height: 1.1;
-}
-
-.footer_contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.footer_line {
-  margin: 0;
-  font-size: 22px;
-  line-height: 1.2;
-}
-
-.footer_label {
-  opacity: 0.95;
-}
-
-.footer_link {
-  color: #f8f5ee;
-  text-decoration: none;
-}
-
-.footer_right {
-  display: flex;
-  align-items: flex-end;
+  font-family: "Junge", serif;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 .footer_social {
   display: flex;
-  gap: 18px;
+  gap: 12px;
 }
 
 .footer_iconBtn {
   width: 44px;
   height: 44px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(248, 245, 238, 0.12);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
-.footer_iconBtn img {
-  width: 42px;
-  height: 42px;
+.footer_icon {
+  width: 22px;
+  height: 22px;
   display: block;
+  opacity: 0.95;
 }
 
-@media (max-width: 640px) {
-  .footer_inner {
-    flex-direction: column;
-    padding-right: 10%;
-    padding-left: 10%;
-    height: 198px;
+.footer_middle {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 0;
+}
+
+.footer_contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_line {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  font-family: "Junge", serif;
+}
+
+.footer_label {
+  font-size: 13px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.footer_link {
+  color: #f8f5ee;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.92;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+
+.footer_small {
+  margin: 0;
+  font-family: "Junge", serif;
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+.footer_iconSvg {
+  width: 22px;
+  height: 22px;
+  color: #f8f5ee;
+}
+
+.footer_bottom {
+  padding-top: 14px;
+  border-top: 1px solid rgba(248, 245, 238, 0.10);
+}
+
+.footer_copy {
+  margin: 0;
+  font-family: "Junge", serif;
+  font-size: 12px;
+  opacity: 0.65;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 34px 0 18px;
   }
 
-  .footer_right {
-    justify-content: flex-start;
+  .footer_container {
+    padding: 0 24px;
+  }
+
+  .footer_logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer_name {
+    font-size: 20px;
+  }
+
+  .footer_tag {
+    font-size: 15px;
+  }
+
+  .footer_middle {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .footer_contacts {
+    min-width: 340px;
+  }
+
+  .footer_note {
+    flex: 1;
+    max-width: 520px;
+  }
+
+  .footer_small {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer_top {
+    padding-bottom: 22px;
+  }
+
+  .footer_middle {
+    padding: 22px 0;
+  }
+
+  .footer_iconBtn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .footer_icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer_link {
+    font-size: 17px;
   }
 }
